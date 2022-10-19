@@ -1,1 +1,1 @@
-# Latix-Linter
+# Latex-Linter
