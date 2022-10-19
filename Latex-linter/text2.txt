@@ -1,0 +1,9 @@
+(La)TeX.isa.typesetting.
+!(La)TeX%isa?typesetting,
+(La)TeX;isa:typesetting
+\chapter{figure}
+\begin{figure}
+\cent%ering
+\includ%egraphics[width=0.3\textwidth]{frog.jpg}
+\caption{\label{fig:frog}This frog was uploaded via the file-tree menu.}
+\end{%figure}

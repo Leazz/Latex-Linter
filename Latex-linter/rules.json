@@ -1,0 +1,16 @@
+{
+    "default_rules": {
+        "new_lines_afterDots": true,
+        "add_space_afterComments": true,
+        "blank_lines_beforSections": true,
+        "number_of_blankLines": 3,
+        "blocks": true
+    },
+    "user_rules": {
+        "new_lines_afterDots": true,
+        "add_space_afterComments": true,
+        "blank_lines_beforSections": true,
+        "number_of_blankLines": 3,
+        "blocks": true
+    }
+}
