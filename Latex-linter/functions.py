@@ -1,13 +1,4 @@
 import json
-
-
-def printFile(file):
-    """
-    Print file function
-    """
-    with open(file, 'r') as f:
-        contents = f.read()
-    print(contents)
    
 
 def addLinesAfterDots(file):
@@ -40,15 +31,6 @@ def addSpace(file):
         save_data.write(contents)
     return contents
 
-def createFile(updatedFile):
-    """
-    Create an updated file function
-
-    """
-    newFile = open("copyOfTheFile.tex", "w")
-    newFile.writelines(updatedFile)
-
-    return newFile
 
 def addTabs(start, end, content):
     """
@@ -56,8 +38,8 @@ def addTabs(start, end, content):
 
     """
     for i in range(start, end + 1):
-        
         if not content[i].startswith("\t"):
+            print(content[i])
             content[i] = "\t" + str(content[i])
     with open("copyOfTheFile.tex", "w") as f:
         for i in range(len(content)):
@@ -75,12 +57,15 @@ def blocks(file):
     startIndex = 0
     while(index < len(content)): 
         if content[index].startswith("\\begin{"):
+            print(index)
             startIndex = index + 1
-        
+            print(startIndex)
         if content[index].startswith("\\end{"):
             endIndex = index - 1
+            print(index)
+            print(endIndex)
 
-        if index -1 == endIndex and content[index].startswith("\end{"):
+        if index -1 == endIndex and content[index].startswith("\\end{"):
 
             addTabs(startIndex, endIndex, content)
         index += 1
@@ -133,7 +118,7 @@ def jsonUpdate(jsonData, key, value):
     
 def checkFileType(file):
     """
-    check type of file function.
+    check type of the file function.
     """
     if file.endswith(".tex") or file.endswith(".tikz") or file.endswith(".bib") :
         print(file)

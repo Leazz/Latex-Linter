@@ -16,16 +16,16 @@ def main():
 
 
     pas = argparse.ArgumentParser(description = "file") 
-    pas.add_argument( 'text',type = str,  help = "Enter file name"  )
+    pas.add_argument( 'tex',type = str,  help = "Enter file name"  )
     argss = pas.parse_args() 
-    fileName = argss.text
+    fileName = argss.tex
 
     while True:
         if functions.checkFileType(fileName) == False:
             print("\033[1;32mThe enterd file type is not available, enter the file again\033[0;0m")
             break
         print("\033[1;32mWould you like to modify the json rules? (Yes/No).\033[0;0m")
-        print("\033[1;32mIf no the file will be modified according the default_rules in json file.\n\033[0;0m")
+        print("\033[1;32mIf no the file will be modified according the default rules in json file.\n\033[0;0m")
         choice = input("choose\033[1;32m Yes\033[0;0m or\033[1;32m No \033[0;0m-->> ")
         if choice == "no":
             with open(fileName, "r") as orginalFile:

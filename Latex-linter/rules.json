@@ -8,9 +8,9 @@
     },
     "user_rules": {
         "new_lines_afterDots": true,
-        "add_space_afterComments": true,
+        "add_space_afterComments": "",
         "blank_lines_beforSections": true,
-        "number_of_blankLines": 3,
-        "blocks": true
+        "number_of_blankLines": 4,
+        "blocks": ""
     }
 }

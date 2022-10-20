@@ -123,6 +123,7 @@ class test(unittest.TestCase):
         """
         myFile = "test.tikz"
         self.assertTrue(functions.checkFileType(myFile), True)
+        
 
     def test_chekTheFile3(self):
         """
