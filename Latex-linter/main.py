@@ -2,12 +2,7 @@
 Main program
 """
 import functions
-import json 
 import argparse
-
-
-
-
 
 '''
 LaTex linter menu.
@@ -61,16 +56,12 @@ def main():
                 print("2. Add space after comments:  -> ")
                 print("3. Add blank line befor sections:  -> ")
                 print("4. Add tabs after blocks: -> ")
+                print("q. Quit -> ")
                 choice = input("enter choice: -->>")
             
-            
-
-                if choice == "q":
-                    print("\033[1;32m Bye, bye!\n \033[0;0m")
-                    break
 
 
-                elif choice == '1':
+                if choice == '1':
                         copyOfFile = functions.addLinesAfterDots("copyOfTheFile.tex")
                         functions.jsonUpdate(functions.jsonData(),"new_lines_afterDots", True) 
                         print("\033[1;32mNew line added succesfully.\033[0;0m")
@@ -96,6 +87,10 @@ def main():
                     copyOfFile = functions.blocks("copyOfTheFile.tex")
                     functions.jsonUpdate(functions.jsonData(),"blocks", True)
                     print("\033[1;32mTabs added succesfully.\033[0;0m")
+
+                elif choice == "q":
+                    print("\033[1;32m Bye, bye!\n \033[0;0m")
+                    break
                    
 
                 else:
