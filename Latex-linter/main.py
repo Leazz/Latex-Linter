@@ -9,8 +9,6 @@ LaTex linter menu.
 
 '''
 
-
-
 def main():
     """
     main function

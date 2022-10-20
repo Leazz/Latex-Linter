@@ -23,19 +23,9 @@ def addLinesAfterDots(file):
         contents = contents.replace("; ", ";\n")
         contents = contents.replace("! ", "!\n")
         
-                
     with open("copyOfTheFile.tex", "w") as save_data:
         save_data.write(str(contents))      
     return contents
-
-
-
-
-    
-        
-
-
-
 
 def addSpace(file):
     """
@@ -50,8 +40,6 @@ def addSpace(file):
         save_data.write(contents)
     return contents
 
-
-
 def createFile(updatedFile):
     """
     Create an updated file function
@@ -61,8 +49,6 @@ def createFile(updatedFile):
     newFile.writelines(updatedFile)
 
     return newFile
-
-
 
 def addTabs(start, end, content):
     """
@@ -76,7 +62,6 @@ def addTabs(start, end, content):
     with open("copyOfTheFile.tex", "w") as f:
         for i in range(len(content)):
             f.write(str(content[i])) 
-
 
 def blocks(file):
     """
@@ -105,9 +90,6 @@ def blocks(file):
             save_data.write(str(content[i]))
 
         return content
-
-
-
 
 
 def blankLine(file, numOfLine):
@@ -139,76 +121,23 @@ def jsonData():
     return data_j
 
 
-
-
-
 def jsonUpdate(jsonData, key, value):
     """
     update json file function
-
     """
     jsonData["user_rules"][key] = value
     jsonF = open("rules.json", "w")
     jsonF.write(json.dumps(jsonData, indent=4))
     jsonF.close()
 
-
-
-
     
 def checkFileType(file):
-
+    """
+    check type of file function.
+    """
     if file.endswith(".tex") or file.endswith(".tikz") or file.endswith(".bib") :
-        
-        
         print(file)
         return True
-
     else:
         return False
 
-
-    # elif file.endswith(".tikz") in data["default_rules"]["TypeOfFile"]:
-        
-    #     print(file)
-    #     return True
-    # elif file.endswith(".bib") in data["default_rules"]["TypeOfFile"]:
-    #     return True
-
-  # a method will read the data from parse argument object.
-# printFile(argss.text)
-# myNewFile = addLinesAfterDots(argss.text)
-# # # print(myNewFile)
-# createFile(myNewFile)
-# filo = blankLine(argss.text, 2)
-# createFile(filo) 
-
-
-# printFile(argss.rules)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# def main() -> None:
-#     file = 'text.txt'
-#     ...
-
-# if __name__ == "__main__":
-#     main()
