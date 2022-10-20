@@ -39,7 +39,7 @@ def addTabs(start, end, content):
     """
     for i in range(start, end + 1):
         if not content[i].startswith("\t"):
-            print(content[i])
+            # print(content[i])
             content[i] = "\t" + str(content[i])
     with open("copyOfTheFile.tex", "w") as f:
         for i in range(len(content)):
@@ -57,13 +57,13 @@ def blocks(file):
     startIndex = 0
     while(index < len(content)): 
         if content[index].startswith("\\begin{"):
-            print(index)
+            # print(index)
             startIndex = index + 1
-            print(startIndex)
+            # print(startIndex)
         if content[index].startswith("\\end{"):
             endIndex = index - 1
-            print(index)
-            print(endIndex)
+            # print(index)
+            # print(endIndex)
 
         if index -1 == endIndex and content[index].startswith("\\end{"):
 
@@ -121,7 +121,7 @@ def checkFileType(file):
     check type of the file function.
     """
     if file.endswith(".tex") or file.endswith(".tikz") or file.endswith(".bib") :
-        print(file)
+        # print(file)
         return True
     else:
         return False
