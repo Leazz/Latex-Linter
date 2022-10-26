@@ -121,7 +121,6 @@ def checkFileType(file):
     check type of the file function.
     """
     if file.endswith(".tex") or file.endswith(".tikz") or file.endswith(".bib") :
-        # print(file)
         return True
     else:
         return False
